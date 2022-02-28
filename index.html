@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Audio-player</title>
+</head>
+<body>
+    <img src="./assets/img/cover1.png" class="background-img" alt="Background-Image">
+    <main>
+           <div class="audio-wrapper">
+            <div class="player-container"></div>
+            <audio class="audio" src="./assets/audio/Don't start now.mp3"></audio>
+            <img src="./assets/img/cover1.png" alt="song image" class="song-image">
+            <img src="./assets/svg/play.png" alt="." id="play-song" class="play-song img-src">
+            <img src="./assets/svg/forward.png" alt="." class="next-song">
+            <img src="./assets/svg/backward.png" alt="." class="back-song">
+            <div class="artist">Dua Lipa</div>
+            <div class="title">Don't start now</div>
+            <input type="range" class="player-bar" value="0">
+            <div class="current-time"></div>
+            <div class="duration-time"></div>
+           </div>
+    </main>
+   
+   <footer>
+       <div class="footer-container">
+           <div class="footer-items">
+               <div class="rs-school">
+                <a href="https://rs.school/js-stage0/" target="_blank">
+                    <img src="./assets/svg/rs_school_js.svg" alt="rs-school" class="rs-school-link">
+                </a>
+               </div>
+               <div class="date">
+                <p><a href="https://github.com/AlexSandra96" class="date-link">GitHub AlexSandra96</a></p>
+                <p class="date-year">2022&#169;</p>
+               </div>
+           </div>
+       </div>
+   </footer>
+    <script src="./index.js"></script>
+</body>
+</html>
