@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ ul, ol {
+    list-style: none;
+}
+a, a:visited, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Noto Sans', sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(4px);
+    z-index: -3;
+}
+
+.pause {
+    background-image: url(./assets/svg/pause.png);
+}
+
+
+.audio-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 350px;
+    max-height: 400px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(158, 154, 154);
+    box-shadow: 0px 0px 17px 6px rgba(18, 18, 19, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.song-image {
+    position: absolute;
+    width: 100%;
+    top: -5%;
+    z-index: 1;
+}
+
+.player-container {
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    background:radial-gradient(circle, rgba(232,217,224,1) 0%, rgba(5,5,5,1) 100%);
+    z-index: 3;
+}
+
+.play-song {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    z-index: 3;
+    bottom: 15%;
+    left: 4%;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(1129%) hue-rotate(317deg) brightness(92%) contrast(96%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.play-song:hover, .next-song:hover, .back-song:hover {
+    filter: brightness(0) saturate(100%) invert(84%) sepia(5%) saturate(1856%) hue-rotate(335deg) brightness(104%) contrast(105%); 
+}
+
+.next-song {
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    right: 4%;
+    bottom: 23%;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(1129%) hue-rotate(317deg) brightness(92%) contrast(96%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.back-song {
+    position: absolute;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+    right: 4%;
+    bottom: 15%;
+    filter: brightness(0) saturate(100%) invert(97%) sepia(1%) saturate(1129%) hue-rotate(317deg) brightness(92%) contrast(96%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.artist {
+    position: absolute;
+    z-index: 3;
+    bottom: 20%;
+    font-size: 24px;
+    color: rgb(255, 230, 4);
+    -webkit-text-stroke: 1px rgb(68, 67, 67);
+}
+.title {
+    position: absolute;
+    z-index: 3;
+    bottom: 15%;
+    font-size: 18px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+    bottom: 7%;
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+    width: 70%;
+    height: 6px;
+    border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    box-shadow: -300px 0 0 300px blanchedalmond;
+    width: 1px;
+} 
+.current-time {
+    position: absolute;
+    z-index: 3;
+    bottom: 1%;
+    left: 10%;
+}
+.duration-time {
+    position: absolute;
+    z-index: 3;
+    bottom: 9%;
+    right: 10%;
+}
+
+
+/* Footer */
+.footer-container {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 20px;
+    
+}
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rs-school-link {
+    width: 90px;
+    height: 80px;
+    transition: width 0.5s ease-in;
+}
+.rs-school-link:hover,.rs-school-link:active  {
+    width: 110px;
+}
+.date {
+    display: flex;
+} 
+.date-link {
+    margin-right: 30px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    transition: color 0.5s ease-in-out;
+}
+.date-link:hover {
+    color: rgb(155, 160, 180);
+}
+.date-year {
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 150%;
+}
